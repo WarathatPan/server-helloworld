@@ -8,6 +8,8 @@ const morgan = require('morgan');
 
 const calculatorController = require('../controllers/CalculatorController');
 
+require('dotenv').config();
+
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -15,7 +17,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cors());
 
-require('dotenv').config();
 /* ใช้ port 8081 หรือจะส่งเข้ามาตอนรัน app ก็ได้ */
 const port = process.env.PORT || 8080;
 
