@@ -1,0 +1,35 @@
+{
+  "name": "server-helloworld",
+  "version": "1.0.0",
+  "description": "Server API",
+  "author": "Warathat",
+  "private": true,
+  "scripts": {
+    "start": "nodemon routes/app.js",
+    "test:unit": "mocha --exit tests/unit/Calculator.spec.js",
+    "test:integration": "mocha --exit tests/integration/Calculator.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boss119/server-helloworld.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boss119/server-helloworld/issues"
+  },
+  "homepage": "https://github.com/boss119/server-helloworld#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "mocha": "^5.2.0",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.18.2",
+    "supertest": "^3.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2"
+  }
+}
