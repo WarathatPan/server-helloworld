@@ -17,7 +17,7 @@ app.use(cors());
 
 require('dotenv').config();
 /* ใช้ port 8081 หรือจะส่งเข้ามาตอนรัน app ก็ได้ */
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 8080;
 
 /* Routing */
 app
