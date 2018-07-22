@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 
-const calculatorController = require('../controllers/CalculatorController');
+const calculatorController = require('./controllers/CalculatorController');
 
 require('dotenv').config();
 
@@ -18,12 +18,15 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 
 /* ใช้ port 8081 หรือจะส่งเข้ามาตอนรัน app ก็ได้ */
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 80;
 
 /* Routing */
 app
   .get('/', (req, res) => {
     res.send('Index');
+  })
+  .get('/hello', (req, res) => {
+    res.send('Hello!!');
   })
   .post('/calculator', calculatorController);
 
